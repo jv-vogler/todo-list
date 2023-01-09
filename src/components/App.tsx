@@ -55,7 +55,7 @@ const App: React.FC = () => {
     <StyledApp>
       <GlobalStyle />
       <Header />
-      <TodoForm />
+      <TodoForm onAdd={handleAdd} />
       <TodoList />
     </StyledApp>
   );
