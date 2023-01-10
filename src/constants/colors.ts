@@ -1,11 +1,12 @@
 const colors = {
-  PRIMARY: '#0070f3',
-  SECONDARY: '#5a5a5a',
-  TERTIARY: '#b8b8b8',
-  SUCCESS: '#00c853',
-  ERROR: '#ff5252',
-  BACKGROUND: '#f5f5f5',
-  SURFACE: '#ffffff',
+  WHITE: '#ffffff',
+  LIGHT_GRAY: '#f5f5f5',
+  DARK_GRAY: '#333333',
+  BLACK: '#000000',
+  LIGHT_BLUE: '#00b8d4',
+  MEDIUM_BLUE: '#0097b3',
+  LIGHT_RED: '#ff5252',
+  MEDIUM_RED: '#a70000',
 } as const;
 
-export default colors
+export default colors;

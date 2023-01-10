@@ -13,13 +13,13 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: Poppins, sans-serif;
   }
   
   body {
     height: 100vh;
-    color: ${colors.SECONDARY};
-    background-color: ${colors.BACKGROUND};
-    font-family: Poppins, sans-serif;
+    color: ${colors.DARK_GRAY};
+    background-color: ${colors.LIGHT_GRAY};
   }
 `;
 
@@ -27,7 +27,6 @@ const StyledApp = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
   gap: 30px;
 `;
 
@@ -56,7 +55,7 @@ const App: React.FC = () => {
       <GlobalStyle />
       <Header />
       <TodoForm onAdd={handleAdd} />
-      <TodoList />
+      <TodoList items={todos} onRemove={handleRemove} onToggle={handleToggle} />
     </StyledApp>
   );
 };
