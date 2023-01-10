@@ -1,4 +1,4 @@
-# [Weather App](https://jv-vogler.github.io/todo-list/)
+# [Todo List](https://jv-vogler.github.io/todo-list/)
 
 [![en](https://img.shields.io/badge/README%20in-english-red.svg)](../main/README.en.md)
 
