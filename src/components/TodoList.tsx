@@ -2,12 +2,14 @@ import Todo from '../interfaces/Todo';
 import { RiDeleteBin5Fill, RiCheckboxBlankLine, RiCheckboxFill } from 'react-icons/ri';
 import styled from 'styled-components';
 import colors from '../constants/colors';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 
-const List = styled.ul`
+const List = styled.ul<any>`
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  min-width: 250px;
 `;
 
 const ListItem = styled.li`
@@ -67,8 +69,10 @@ const TodoList = (props: {
   onToggle: (id: string) => void;
   onRemove: (id: string) => void;
 }) => {
+  const [parent] = useAutoAnimate({ duration: 250, easing: 'ease-in' });
+
   return (
-    <List>
+    <List ref={parent}>
       {props.items.map(item => (
         <ListItem key={item.id}>
           {item.text}
